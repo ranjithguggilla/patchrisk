@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Configure git for the mining tests
+        run: git config --global init.defaultBranch main
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Lint
+        run: ruff check .
+      - name: Tests
+        run: pytest -q --cov=patchrisk
+
+  train:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Train, evaluate and write charts
+        run: patchrisk run
+      - uses: actions/upload-artifact@v4
+        with:
+          name: patchrisk-run
+          path: |
+            outputs/metrics.json
+            outputs/bundle.joblib
+            outputs/tables/
+            assets/
