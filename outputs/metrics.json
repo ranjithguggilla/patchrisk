@@ -1,0 +1,461 @@
+{
+  "data": {
+    "commits": 12278,
+    "repos": 6,
+    "fix_commits_by_message": 2652,
+    "szz_links": 7023,
+    "bug_rate_all": 0.26747027203127544,
+    "per_repo": {
+      "click": {
+        "commits": 1318,
+        "bug_rate": 0.23975720789074356
+      },
+      "flask": {
+        "commits": 2028,
+        "bug_rate": 0.20463510848126232
+      },
+      "httpx": {
+        "commits": 979,
+        "bug_rate": 0.34831460674157305
+      },
+      "jinja": {
+        "commits": 1528,
+        "bug_rate": 0.32329842931937175
+      },
+      "requests": {
+        "commits": 2824,
+        "bug_rate": 0.22875354107648727
+      },
+      "werkzeug": {
+        "commits": 3601,
+        "bug_rate": 0.2976950846986948
+      }
+    },
+    "split": {
+      "train": {
+        "commits": 9288,
+        "bug_rate": 0.28897502153316107,
+        "lines": 628379
+      },
+      "validation": {
+        "commits": 866,
+        "bug_rate": 0.1489607390300231,
+        "lines": 71891
+      },
+      "test": {
+        "commits": 977,
+        "bug_rate": 0.13203684749232344,
+        "lines": 74193
+      }
+    }
+  },
+  "models": {
+    "logistic": {
+      "val_log_loss": 0.38479171593481404,
+      "val_se": 0.014645283377776874,
+      "auc": 0.7951404124616059,
+      "avg_precision": 0.42627150971154726,
+      "log_loss": 0.38446099771485276,
+      "ece": 0.12964145382193185,
+      "recall_at_20pct_loc": 0.029650822195882897,
+      "popt": 0.266876030218933,
+      "ifa": 0
+    },
+    "boosting": {
+      "val_log_loss": 0.37934481602665393,
+      "val_se": 0.014139199450535992,
+      "auc": 0.7766747111306128,
+      "avg_precision": 0.34229375527909206,
+      "log_loss": 0.3874410660128923,
+      "ece": 0.1198016696242273,
+      "recall_at_20pct_loc": 0.05965476039316423,
+      "popt": 0.2649727501181547,
+      "ifa": 0
+    },
+    "forest": {
+      "val_log_loss": 0.38802480354137425,
+      "val_se": 0.012676821875422123,
+      "auc": 0.7847100336404856,
+      "avg_precision": 0.3409160843792656,
+      "log_loss": 0.3949064708579441,
+      "ece": 0.13588777876411698,
+      "recall_at_20pct_loc": 0.07860407111398374,
+      "popt": 0.286245878977419,
+      "ifa": 0
+    },
+    "random": {
+      "auc": 0.5239505631124762,
+      "avg_precision": 0.1357375996776329,
+      "log_loss": NaN,
+      "ece": NaN,
+      "recall_at_20pct_loc": 0.16279069767441862,
+      "popt": 0.49864693361146145,
+      "ifa": 10
+    },
+    "size_rule (churn)": {
+      "auc": 0.76416465555068,
+      "avg_precision": 0.3767641582033066,
+      "log_loss": NaN,
+      "ece": NaN,
+      "recall_at_20pct_loc": 0.026989790033449874,
+      "popt": 0.19417286849017054,
+      "ifa": 0
+    },
+    "file_history_rule": {
+      "auc": 0.4607923796986983,
+      "avg_precision": 0.11640029290789305,
+      "log_loss": NaN,
+      "ece": NaN,
+      "recall_at_20pct_loc": 0.2976995115830981,
+      "popt": 0.5800514253337025,
+      "ifa": 3
+    },
+    "train_base_rate": {
+      "auc": 0.4874579493930086,
+      "avg_precision": 0.12723505990637193,
+      "log_loss": 0.4599293795267433,
+      "ece": 0.1569381745475077,
+      "recall_at_20pct_loc": 0.14728682170542637,
+      "popt": 0.4476253758305631,
+      "ifa": 13
+    },
+    "size_features_only_logistic": {
+      "auc": 0.7843535176246892,
+      "avg_precision": 0.41693032243150135,
+      "log_loss": 0.43809204279037384,
+      "ece": 0.17938930006496762,
+      "recall_at_20pct_loc": 0.026989790033449874,
+      "popt": 0.25197884857956515,
+      "ifa": 0
+    },
+    "risk_density (p per changed line)": {
+      "auc": 0.29576203013017405,
+      "avg_precision": 0.0905135185373169,
+      "log_loss": NaN,
+      "ece": NaN,
+      "recall_at_20pct_loc": 0.6124031007751938,
+      "popt": 0.8214922745107668,
+      "ifa": 12
+    }
+  },
+  "shipped_model": "logistic",
+  "shipped_ci": {
+    "auc": [
+      0.7563812787268726,
+      0.833163392352253
+    ],
+    "recall_at_20pct_loc_by_probability": [
+      0.019376719249382602,
+      0.06632394895815452
+    ],
+    "auc_gap_vs_size_rule": [
+      0.008430296047080274,
+      0.05009443163135282
+    ],
+    "recall_at_20pct_loc_by_risk_density": [
+      0.6124031007751938,
+      0.4915084506996304,
+      0.666216331508915
+    ],
+    "density_minus_random_20pct": [
+      0.41240310077519376,
+      0.3253258866470265,
+      0.49111474939309213
+    ],
+    "recall_gap_probability_vs_size": [
+      0.0,
+      0.03555130724934874
+    ],
+    "smallest_first_recall_at_20pct_loc": 0.5813953488372093,
+    "density_minus_smallest_first_recall_20pct": [
+      0.03100775193798444,
+      -0.01667746759720832,
+      0.08481445005757277
+    ]
+  },
+  "calibration": {
+    "val_second_half_ece_raw": 0.13130549289408427,
+    "val_second_half_ece_isotonic": 0.048713878519439674,
+    "isotonic_shipped": true,
+    "test_ece_raw": 0.12964145382193185,
+    "test_ece_isotonic": 0.03308674887807646,
+    "mean_prediction_test": 0.2616783013142553,
+    "observed_test": 0.13203684749232344,
+    "validation_bug_rate": 0.1489607390300231,
+    "train_bug_rate": 0.28897502153316107
+  },
+  "label_maturity": {
+    "known_dropped": {
+      "train_rows": 9288,
+      "train_bug_rate": 0.28897502153316107,
+      "auc": 0.7951404124616059,
+      "avg_precision": 0.42627150971154726,
+      "log_loss": 0.38446099771485276,
+      "ece": 0.12964145382193185,
+      "recall_at_20pct_loc": 0.029650822195882897,
+      "popt": 0.266876030218933,
+      "ifa": 0
+    },
+    "known_kept": {
+      "train_rows": 9973,
+      "train_bug_rate": 0.2785520906447408,
+      "auc": 0.7891344888108819,
+      "avg_precision": 0.4183054363204055,
+      "log_loss": 0.3587206141288603,
+      "ece": 0.095639972257224,
+      "recall_at_20pct_loc": 0.029650822195882897,
+      "popt": 0.2691978886172901,
+      "ifa": 0
+    },
+    "hindsight": {
+      "train_rows": 9973,
+      "train_bug_rate": 0.29990975634212375,
+      "auc": 0.7962191019452975,
+      "avg_precision": 0.42820714502470353,
+      "log_loss": 0.3914891248403373,
+      "ece": 0.13633607097626424,
+      "recall_at_20pct_loc": 0.029650822195882897,
+      "popt": 0.2690876931519157,
+      "ifa": 0
+    },
+    "young_tail": {
+      "commits": 685,
+      "bug_rate_known_at_cutoff": 0.13722627737226278,
+      "bug_rate_with_hindsight": 0.28175182481751826,
+      "oldest_train_age_days": 5057.1128240740745
+    }
+  },
+  "split_protocols": {
+    "random_rows": {
+      "auc": 0.788926269579966,
+      "avg_precision": 0.600303578245021,
+      "log_loss": 0.47524015367904293,
+      "ece": 0.013593410226769074,
+      "recall_at_20pct_loc": 0.006739098230186125,
+      "popt": 0.23510983201643643,
+      "ifa": 1
+    },
+    "forward_in_time": {
+      "auc": 0.7951404124616059,
+      "avg_precision": 0.42627150971154726,
+      "log_loss": 0.38446099771485276,
+      "ece": 0.12964145382193185,
+      "recall_at_20pct_loc": 0.029650822195882897,
+      "popt": 0.266876030218933,
+      "ifa": 0
+    },
+    "repo_held_out_mean_auc": 0.7841414442206097,
+    "all_repos_mean_auc": 0.7868186488105204
+  },
+  "feature_groups": {
+    "size": {
+      "auc": 0.7629716981132074,
+      "auc_drop": 0.03216871434839852,
+      "recall_at_20pct_loc": 0.11648728879134485
+    },
+    "file history": {
+      "auc": 0.796593900833699,
+      "auc_drop": -0.0014534883720930258,
+      "recall_at_20pct_loc": 0.027369731070415997
+    },
+    "author": {
+      "auc": 0.7924071230071669,
+      "auc_drop": 0.0027332894544390696,
+      "recall_at_20pct_loc": 0.029650822195882897
+    },
+    "complexity": {
+      "auc": 0.7944182389937108,
+      "auc_drop": 0.0007221734678951597,
+      "recall_at_20pct_loc": 0.029650822195882897
+    },
+    "process": {
+      "auc": 0.7816202281702501,
+      "auc_drop": 0.013520184291355819,
+      "recall_at_20pct_loc": 0.026989790033449874
+    }
+  },
+  "economics": {
+    "assumptions": {
+      "loc_per_hour": 200.0,
+      "overhead_hours": 0.25,
+      "reviewer_cost_hour": 90.0,
+      "escape_cost": 2000.0,
+      "deep_catch_rate": 0.3,
+      "cost_per_loc": 0.45
+    },
+    "chosen_budget": 0.55,
+    "model": {
+      "budget": 0.55,
+      "commits": 57,
+      "bugs_in_list": 26,
+      "defects_prevented": 7.8,
+      "review_cost": 19611.9,
+      "value": 15600.0,
+      "net": -4011.9000000000015,
+      "net_per_1000_commits": -4106.345957011261
+    },
+    "largest_first": {
+      "budget": 0.55,
+      "commits": 39,
+      "bugs_in_list": 20,
+      "defects_prevented": 6.0,
+      "review_cost": 19143.9,
+      "value": 12000.0,
+      "net": -7143.9000000000015,
+      "net_per_1000_commits": -7312.077789150462
+    },
+    "random": {
+      "budget": 0.55,
+      "commits": 469,
+      "bugs_in_list": 68,
+      "defects_prevented": 20.4,
+      "review_cost": 28904.850000000002,
+      "value": 40800.0,
+      "net": 11895.149999999998,
+      "net_per_1000_commits": 12175.179119754348
+    },
+    "risk_density": {
+      "budget": 0.55,
+      "commits": 943,
+      "bugs_in_list": 116,
+      "defects_prevented": 34.8,
+      "review_cost": 39312.0,
+      "value": 69600.0,
+      "net": 30288.0,
+      "net_per_1000_commits": 31001.02354145343
+    },
+    "smallest_first": {
+      "budget": 0.55,
+      "commits": 955,
+      "bugs_in_list": 115,
+      "defects_prevented": 34.5,
+      "review_cost": 39672.9,
+      "value": 69000.0,
+      "net": 29327.1,
+      "net_per_1000_commits": 30017.502558853634
+    },
+    "density_minus_largest_first_per_1000": {
+      "point": 38312.640736949856,
+      "ci": [
+        21906.095798150054,
+        54180.06738467794
+      ]
+    },
+    "density_minus_random_per_1000": {
+      "point": 18825.38382804504,
+      "ci": [
+        6157.085395879481,
+        30161.955741169877
+      ]
+    },
+    "density_minus_smallest_first_per_1000": {
+      "point": 983.5209825998043,
+      "ci": [
+        -966.4168866040596,
+        2191.2964993223445
+      ]
+    },
+    "commit_count_recall": {
+      "probability": {
+        "top_10pct": 0.3488372093023256,
+        "top_20pct": 0.5658914728682171,
+        "top_30pct": 0.7054263565891473
+      },
+      "largest_first": {
+        "top_10pct": 0.32558139534883723,
+        "top_20pct": 0.4728682170542636,
+        "top_30pct": 0.6666666666666666
+      },
+      "smallest_first": {
+        "top_10pct": 0.023255813953488372,
+        "top_20pct": 0.03875968992248062,
+        "top_30pct": 0.08527131782945736
+      },
+      "random": {
+        "top_10pct": 0.06976744186046512,
+        "top_20pct": 0.1937984496124031,
+        "top_30pct": 0.27906976744186046
+      }
+    },
+    "top20pct_commits_prob_minus_largest": [
+      0.09302325581395349,
+      0.04027605459057069,
+      0.1555555555555555
+    ],
+    "top20pct_commits_prob_minus_random": [
+      0.37209302325581395,
+      0.30850463925771876,
+      0.4700980392156863
+    ],
+    "top20pct_commits_lines_share": {
+      "probability": 0.7747092043723801,
+      "largest_first": 0.8433275376383217
+    },
+    "break_even_escape_cost_density": 1129.6551724137933,
+    "break_even_escape_cost_random": 1416.904411764706,
+    "smallest_first_bugs_in_list": 115,
+    "sensitivity_density": [
+      {
+        "escape_cost": 500,
+        "catch_rate": 0.15,
+        "net_per_1000": -31332.65097236438
+      },
+      {
+        "escape_cost": 500,
+        "catch_rate": 0.3,
+        "net_per_1000": -22427.840327533264
+      },
+      {
+        "escape_cost": 500,
+        "catch_rate": 0.5,
+        "net_per_1000": -10554.759467758444
+      },
+      {
+        "escape_cost": 1000,
+        "catch_rate": 0.15,
+        "net_per_1000": -22427.840327533264
+      },
+      {
+        "escape_cost": 1000,
+        "catch_rate": 0.3,
+        "net_per_1000": -4618.219037871034
+      },
+      {
+        "escape_cost": 1000,
+        "catch_rate": 0.5,
+        "net_per_1000": 19127.942681678607
+      },
+      {
+        "escape_cost": 2000,
+        "catch_rate": 0.15,
+        "net_per_1000": -4618.219037871034
+      },
+      {
+        "escape_cost": 2000,
+        "catch_rate": 0.3,
+        "net_per_1000": 31001.02354145343
+      },
+      {
+        "escape_cost": 2000,
+        "catch_rate": 0.5,
+        "net_per_1000": 78493.34698055271
+      },
+      {
+        "escape_cost": 5000,
+        "catch_rate": 0.15,
+        "net_per_1000": 48810.64483111566
+      },
+      {
+        "escape_cost": 5000,
+        "catch_rate": 0.3,
+        "net_per_1000": 137858.75127942683
+      },
+      {
+        "escape_cost": 5000,
+        "catch_rate": 0.5,
+        "net_per_1000": 256589.55987717502
+      }
+    ],
+    "review_everything_per_1000": 22549.283520982586
+  }
+}
