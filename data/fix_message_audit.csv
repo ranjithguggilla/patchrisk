@@ -1,0 +1,41 @@
+repo,sha,subject,reads_as_bug_fix
+jinja,d7764372abd9453bce1a2ce5645f53f5b3f0a269,fixed a few broken license declarations. should have been BSD not GPL,0
+requests,3c144351095c7849753e477da0482c044d36f1c4,fix test for 2.6's unittest,0
+werkzeug,25ff6b713bfc32c367d20861165a8cb1ebfde423,Fix debug repr for objects on 3.x,1
+flask,1202996c634b23f82421753cb7c46a5ccdf7aca2,Fixed a template loading bug,1
+click,3982fbe5e4210fa40aea8ff77c54223cc9df41d9,Fixed some 3.x problems.,1
+werkzeug,1cfdcf9824cb20e362979e8f7734012926492165,"test_serving: Use sys.executable, not 'python'",0
+werkzeug,b1f1be90abe7f1ebad7cf1cf9f0e48f316fa10b9,Fix incorrect case of weak etag indicator,1
+jinja,47a506fb8d6c654bcc1e66ea0eac6e38f0890ea6,"Fixed bug that caused ""for item in seq if expr"" to fail if the loop is not accessing loop",1
+flask,6ec83e18dca497a8fbfca6caca5999984bd32f2e,Added a workaround for a pypy bug in context managers,1
+werkzeug,ffb7138fe693514d87088ac88bdef93d12dce2f2,some more name/syntax fixes,1
+requests,1efd06a87da37c074f7590ff5968090d849cea3f,This simplification should work.,0
+requests,56c82c52b060cada1b2dbd1f85fc1352ca6804a7,fixed print statement,1
+click,40987c9fd7ae1a8c817cfa85940bd91554918951,Fixed a bug with empty help texts causing extra newlines,1
+werkzeug,44f9fa75282d7721a381203ed5a45175e65ad106,func_code/__closure__ fix,1
+werkzeug,302716a13dc2891795861efc33ad82382f234070,Reversal of testcase that should fail but does not fail.,0
+click,e234cf958d2416d4b20b53ae850c487fed32fa35,fix(types): decorator typing fails,1
+werkzeug,27adbc5c6c4598109df838bc5ec48801d1253be0,all package templates use werkzeug.templates now. fixed bug in multiline token handling,1
+click,29ab0b033f013ac9f603ad652e0cc813a2d0a550,Backport fixes for autocompletion on chained commands,1
+jinja,2b48839fb65f0ce5276c3de4ad30a705e89a3162,"added a deprecation warning for a variable assignment, scope bug",0
+click,e0033315510510acdba14e880a361ccca091fb4b,fix ParamType.to_info_dict() with no name,1
+jinja,7163513a352cb7eda328fedb2bfcd987510929af,Add tests for lstrip whitespace behavior fix,0
+jinja,a5f6234970db0d4b443d7730839ed531ca99096a,[svn] improved exception for trans,0
+requests,9e9d2c6521e37e1c4f35e04f95a910ad47e28958,Make BaseAdapter describe the mandatory adapter interface (#3216),0
+werkzeug,437cf6fccb10a313c6c620e2da7b58729aa853b9,add 421 Misdirected Request exception,0
+werkzeug,415e3551bd3da15c134beef0bf05e29d066483be,Fixed a bug introduced in the last changeset.,1
+requests,751b35c346e1cf373fcf4b2f19683ebfbd9dae3d,Attempt to quote anyway if unquoting fails,1
+jinja,859efe06de590f58899eb88dbfa81ef1b1f73c58,"[svn] added ugly, ugly, ugly even more ugly but working hack to jinja to patch the template sources into linecache in or",0
+werkzeug,be2b73665eda1631f6114158b3531cf3ae620636,default_exceptions: Prefer direct subclasses.,0
+werkzeug,b1342d2aaae348d91b212727411fc3359ef1ba77,Fixed an issue where query_args were dropped from URL map redirects when bound to environments.,1
+jinja,cb654fbbc28b06610f695d326641bc2ec723d802,[svn] fixed jinja trunk,1
+werkzeug,0db4a12a655502ff97c69a01142bd04035bff1bf,[svn] small change in werkzeug routing (fixed unicode() method of Rule objects),1
+click,f1c2ce9a7407d1c62fcba2251204d336f718f353,Implemented max_content_width.  This fixes #216,0
+requests,80eafe3b63389539a201e6d26505ad91c2428fcc,fix problem with path being double escaped,1
+flask,426a1e25b77e760b4f54bf94aee3e3617850569f,fix pytest 7 warnings,0
+werkzeug,e1c3e3e95408daa4e87eac901e3d26fa5f80b925,"Revert ""Fix #120, disable redis tests if no connection""",0
+werkzeug,86e7893425b32e7aa33f080a4b2c9a8f4b4a8a8c,Fixes to MapAdapter,1
+requests,f7968b6797a50716a2f177ad23439a3c6bb9f683,r.content is None of there's an invalid response. ,1
+werkzeug,0037f879def0c6803837abc3f5760c250c63cbfa,Fixed a double quoting issue (#432),1
+click,2814073e04e7811ce0f4cf70d7b23073e876fc72,fix new mypy findings,0
+jinja,2da479f43bfd6d1baccab43dbd8c94511e0cea84,[svn] fixed bug in replace filter discovered by ronny,1
