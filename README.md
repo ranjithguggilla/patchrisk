@@ -136,7 +136,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Python 3.10 or newer works. The pins in `requirements.txt` are the versions the results were produced with.
+Python 3.12 or newer. The pins in `requirements.txt` are the versions the results were produced with.
 
 ## usage
 
@@ -148,7 +148,7 @@ The mined data is committed, so the study runs without cloning anything.
    patchrisk run
    ```
 
-   It takes about ten seconds. The shipped model is a logistic regression and the run is deterministic, so metrics.json should reproduce to the last digit.
+   It takes about ten seconds. The shipped model is a logistic regression, and its numbers in metrics.json reproduce to floating-point precision. The comparison rows for the random forest, the random order and the base-rate rule can shift slightly from machine to machine (on one rerun the forest's average precision moved from 0.341 to 0.338 and the random review order's net from $12,175 to $11,831 per 1,000 commits), so read those to about two decimals.
 
 2. Open the scoring app:
 

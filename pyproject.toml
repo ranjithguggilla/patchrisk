@@ -7,7 +7,7 @@ name = "patchrisk"
 version = "0.1.0"
 description = "Rank code changes by the chance they introduce a bug, validated forward in time."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Ranjith Guggilla", email = "ranjithguggilla668@gmail.com" }]
 dependencies = [
